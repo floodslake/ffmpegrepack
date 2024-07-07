@@ -84,13 +84,3 @@ jobs:
           prerelease: false
           artifacts: |
             ./release/*.7z
-
-      - name: Delete Older Release
-        if: github.ref == 'refs/heads/main'
-        uses: dev-drprasad/delete-older-releases@v0.2.1
-        with:
-          repo: floodslake/ffmpegrepack
-          keep_latest: 2
-          delete_tags: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
