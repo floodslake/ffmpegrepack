@@ -3,7 +3,7 @@ on:
     paths:
       - '.github/workflows/ffmpeg.yml'
   schedule:
-    - cron: '0 20 20 * *'
+    - cron: '0 0 1 * *'
   workflow_dispatch:
 
 name: ffmpeg
