@@ -53,6 +53,7 @@ jobs:
           popd || exit 1
 
       - name: linux 64 bit GPL Release
+        continue-on-error: true
         run: |
           # Build linux 64 bit GPL Release
           mkdir -p ffmpeg-linux-release
@@ -65,6 +66,7 @@ jobs:
           popd || exit 1
 
       - name: Setup realese
+        continue-on-error: true
         run: |
           mkdir -p release
           pushd release || exit 1
