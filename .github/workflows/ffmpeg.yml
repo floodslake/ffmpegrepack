@@ -49,7 +49,7 @@ jobs:
           tar -xJf ffmpeg-linux.tar.xz && rm -rfv ffmpeg-linux.tar.xz
           mv ffmpeg-*/bin/* .
           rm -rfv ffmpeg-*
-          7z a -mx=9 -mfb=128 -md=1g ffmpeg-linux.7z ff*
+          7z a -mx=9 -mfb=128 -md=512m ffmpeg-linux.7z ff*
           popd || exit 1
 
       - name: Setup realese
